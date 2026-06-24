@@ -1,0 +1,191 @@
+body {
+  min-height: 100vh;
+  width: 100%;
+  background:
+    linear-gradient(135deg, #050816,
+      #0B1026,
+      #24114D);
+  font-family: 'Inter', sans-serif;
+}
+
+.input-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  width: 600px;
+  margin: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  height: 500px;
+  color: white;
+  padding: 20px;
+}
+
+.input-form input {
+  margin: 8px 20px;
+  padding: 5px;
+  height: 25px;
+  margin-bottom: 20px;
+  background-color: rgba(15, 23, 42, 0.75);
+  border: 2px solid rgba(255, 255, 255, 0.08);
+  color: #94A3B8;
+}
+
+.input-form textarea {
+  margin: 8px 20px;
+  padding: 5px;
+  height: 60px;
+  color: #94A3B8;
+  backdrop-filter: blur(18px);
+  background-color: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.input-form label {
+  margin: 0px 20px;
+  color: #CBD5E1;
+}
+
+.input-form h1 {
+  margin: 20px;
+  color: #F8FAFC;
+}
+
+.input-form button {
+  margin: 10px;
+}
+
+.btns {
+  display: flex;
+  justify-content: right;
+  padding: 30px;
+}
+
+.add-note-btn {
+  background: linear-gradient(135deg,
+      #C084FC,
+      #9333EA);
+  height: 40px;
+  width: 100px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 15px;
+  transition: 0.3s ease;
+  box-shadow: 0px 5px 20px rgba(168, 85, 247, 0.45);
+}
+
+.add-note-btn:hover {
+  background-color: #9333EA;
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.cancel-btn {
+  background-color: rgba(255, 255, 255, 0.06);
+  height: 40px;
+  width: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  color: white;
+  font-size: 15px;
+  transition: 0.3s ease;
+}
+
+.cancel-btn:hover {
+  background-color: #04124e;
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.add-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  font-weight: bold;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: #A855F7;
+  border: none;
+  color: white;
+  font-size: 28px;
+  box-shadow: 0 10px 25px rgba(168, 85, 247, 0.4);
+  transition: 0.3s ease;
+}
+
+.add-btn:hover {
+  background-color: #9333EA;
+  cursor: pointer;
+  transform: scale(1.08);
+}
+
+.notes-container {
+  margin: 10px;
+  padding: 20px;
+  display: inline flow-root;
+  background-color: rgba(17, 25, 40, 0.75);
+  border-radius: 10px;
+  transition: 0.5s ease;
+  width: 200px;
+}
+
+.notes-container:hover {
+  border: 1px solid rgba(168, 85, 247, 0.35);
+  transform: scale(1.05);
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dots {
+  font-size: 22px;
+  color: #CBD5E1;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.dots:hover {
+  color: #A855F7;
+  transform: scale(1.1);
+}
+
+.card-bottom {
+  color: #CBD5E1;
+}
+
+.notes-heading {
+  display: flex;
+  justify-content: center;
+  color: #F8FAFC;
+}
+
+.menu {
+  position: absolute;
+  top: 60px;
+  right: -100px;
+  width: 120px;
+  background-color: rgba(17, 24, 39, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 10px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 10px 30px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+}
+
+.menu p {
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  color: white;
+}
+
+.menu p:hover {
+  background-color: rgba(168, 85, 247, 0.2);
+  color: #c084fc;
+}
