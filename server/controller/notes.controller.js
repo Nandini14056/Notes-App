@@ -170,3 +170,11 @@ const deleteNote = async (req, res) => {
     });
   }
 }
+
+module.exports = {
+  createNotes,
+  getAllNotes,
+  getNote,
+  updateNote,
+  deleteNote
+}
