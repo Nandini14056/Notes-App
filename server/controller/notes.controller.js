@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const Note = require("../model/note.model");
+const { Note } = require("../model/note.model");
 
 const getAllNotes = async (req, res) => {
   try {
@@ -32,6 +32,7 @@ const getAllNotes = async (req, res) => {
 const createNotes = async (req, res) => {
   try {
     const { title, content } = req.body;
+    const owner = req.user;
 
     if (!owner) {
       return res.status(401).json({
