@@ -199,7 +199,3 @@ npm run dev
 **Nandini Raulji**
 
 ---
-
-## 📄 License
-
-This project is licensed under the MIT License.
