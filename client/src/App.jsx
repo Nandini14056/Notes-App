@@ -1,31 +1,66 @@
-import './App.css'
-import { InputForm } from '../Components/InputForm'
-import { NotesData } from '../Components/NotesData'
-import { useState, useEffect } from 'react'
-import axios from 'axios'
+import { Routes, Route } from "react-router-dom";
+
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Home from "./pages/Home";
+import AddNote from "./pages/AddNote";
+import EditNote from "./pages/EditNote";
+import ViewNote from "./pages/ViewNote";
+
+import ProtectedRoute from "./Components/ProtectedRoute";
 
 function App() {
-  const [notes, setNotes] = useState([]);
-
-  useEffect(() => {
-    const fetchNotes = async () => {
-      try {
-        const res = await axios.get("http://localhost:5000/notes")
-
-        setNotes(res.data)
-      } catch (error) {
-        console.log(error)
-      }
-    }
-    fetchNotes()
-  }, [])
-
   return (
-    <>
-      <NotesData notes={notes} setNotes={setNotes} />
-      <InputForm setNotes={setNotes} />
-    </>
-  )
+    <Routes>
+
+      <Route
+        path="/login"
+        element={<Login />}
+      />
+
+      <Route
+        path="/register"
+        element={<Register />}
+      />
+
+      <Route
+        path="/"
+        element={
+          <ProtectedRoute>
+            <Home />
+          </ProtectedRoute>
+        }
+      />
+
+      <Route
+        path="/add"
+        element={
+          <ProtectedRoute>
+            <AddNote />
+          </ProtectedRoute>
+        }
+      />
+
+      <Route
+        path="/edit/:id"
+        element={
+          <ProtectedRoute>
+            <EditNote />
+          </ProtectedRoute>
+        }
+      />
+
+      <Route
+        path="/note/:id"
+        element={
+          <ProtectedRoute>
+            <ViewNote />
+          </ProtectedRoute>
+        }
+      />
+
+    </Routes>
+  );
 }
 
-export default App
+export default App;
